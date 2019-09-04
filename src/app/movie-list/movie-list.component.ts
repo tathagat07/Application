@@ -33,7 +33,7 @@ movieSearch(search: string) {
 onsubmit1(movie) {
   return this.service1.moviefav(movie).subscribe();
 }
-onsubmit(){
+onsubmit() {
   this.router.navigate(['/favorites']);
 }
 }

@@ -41,7 +41,7 @@ getSearch(url: string): Observable<any> {
   getfav(): Observable<any> {
     return this.http.get<any>('http://localhost:3000/posts/');
   }
-  delMov(id : number): Observable<any>{
+  delMov(id: number): Observable<any>{
     return this.http.delete<any>(`${'http://localhost:3000/posts/'}/${id}`);
   }
    }

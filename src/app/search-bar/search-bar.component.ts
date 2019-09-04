@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
 import { DetailsService } from '../details.service';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-search-bar',
@@ -9,7 +9,7 @@ import { DetailsService } from '../details.service';
 })
 export class SearchBarComponent implements OnInit {
  public  movies =[];
-  constructor(private router: ActivatedRoute, private httpservice: DetailsService, private appservice: DetailsService,private service1: DetailsService) { }
+  constructor(private router: ActivatedRoute, private httpservice: DetailsService, private appservice: DetailsService, private service1: DetailsService) { }
    public api;
   ngOnInit() {
 
@@ -24,5 +24,8 @@ export class SearchBarComponent implements OnInit {
   }
   onsubmit1(movie) {
     return this.service1.moviefav(movie).subscribe();
+  }
+  onsubmit(){
+    this.router.navigate(['/favorites']);
   }
 }

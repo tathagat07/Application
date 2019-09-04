@@ -16,8 +16,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="html/signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="html/signUp.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
                 <li><a (click)="onsubmit()"><span class="glyphicon glyphicon-heart"></span> Favorite</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -66,12 +65,12 @@
 
                     <nav>
                         <!-- [routerLink]="['/movie/'+'movie.id']" routerLinkActive="router-link-active" -->
-                        <a href="/movie/:{{movie.id}}"> <a class="btn btn-default btn-lg showcase-btn">Read More</a></a>
+                        <a href="/movie/:{{movie.id}}"> <a class="btn btn-default btn-lg showcase-btn">Overview</a></a>
                     </nav>
 
                     <br>
                     <nav>
-                        <a (click)="onsubmit1(movie)"> <a class="btn btn-default btn-lg showcase-btn">Add to favorites</a></a>
+                        <a (click)="onsubmit1(movie)"> <a class="btn btn-default btn-lg showcase-btn">Mark as favorites</a></a>
                     </nav>
 
                     <hr style="margin-top: 152px">
